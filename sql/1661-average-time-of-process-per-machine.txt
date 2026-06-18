@@ -1,0 +1,4 @@
+# Write your MySQL query statement below
+select machine_id,round(2*AVg(IF(activity_type = 'end',timestamp,timestamp-2*timestamp )),3) as processing_time
+from Activity
+group by machine_id
